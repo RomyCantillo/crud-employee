@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Data
@@ -14,10 +15,8 @@ public class EmployeeDto {
     private String name;
     private String numberId;
     private LocalDate birthDate;
+    private Character status;
+    private BigDecimal salary;
+    private LocalDate startDate;
 
-    public EmployeeDto(String name, String numberId, LocalDate birthDate) {
-        this.name = name;
-        this.numberId = numberId;
-        this.birthDate = birthDate;
-    }
 }
