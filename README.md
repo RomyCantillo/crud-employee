@@ -4,5 +4,6 @@ The diferent technologies tha we have been used are
 Api Rest
 Java - Spring boot
 Jpa - Hibernate
-DB - Postgrees
+DB - H2
 Lombok
+Mapstruck
