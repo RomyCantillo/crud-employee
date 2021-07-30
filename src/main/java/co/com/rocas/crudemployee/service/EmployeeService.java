@@ -1,6 +1,6 @@
 package co.com.rocas.crudemployee.service;
 
-import co.com.rocas.crudemployee.dto.EmployeeDto;
+import co.com.rocas.crudemployee.entity.Employee;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -8,7 +8,15 @@ import java.util.List;
 public interface EmployeeService {
 
     @Transactional
-    EmployeeDto save(EmployeeDto employee);
+    Employee save(Employee employee);
 
-    List<EmployeeDto> getAllEmployees();
+    List<Employee> getAllEmployees();
+
+    Employee getEmployeeById(Long id);
+
+    Employee updateEmployee(Employee employee);
+
+    Employee inactivateEmployee(Long id);
+
+    Employee getOldestEmployees();
 }
