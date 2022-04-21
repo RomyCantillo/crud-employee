@@ -33,6 +33,7 @@ public class EmployeeControllerImpl implements EmployeeController {
         EmployeeDto newEmployee =
                 EmployeeMapper.INSTANCE.employeeToDto(employeeService.save(
                         EmployeeMapper.INSTANCE.dtoToEmployee(employeeDto)));
+        log.info("Finish of save method in EmployeeControllerImpl");
         return new ResponseEntity<>(newEmployee, HttpStatus.CREATED);
     }
 
